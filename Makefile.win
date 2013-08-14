@@ -1,0 +1,84 @@
+# Project: shipwreck
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = Bullet.o DeathState.o Enemy.o Game.o GameObject.o GameState.o main.o Menoticon.o MenoticonBullet.o MenuState.o PauseState.o Player.o PlayState.o Runoticon.o SDL_collide.o Shipwreck.o Sprite.o Vector2.o Spikoticon.o $(RES)
+LINKOBJ  = Bullet.o DeathState.o Enemy.o Game.o GameObject.o GameState.o main.o Menoticon.o MenoticonBullet.o MenuState.o PauseState.o Player.o PlayState.o Runoticon.o SDL_collide.o Shipwreck.o Sprite.o Vector2.o Spikoticon.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -L"C:/SDL-1.2.15/lib" -mwindows -lmingw32 -lSDLmain -lSDL -lSDL_image -lSDL_ttf  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include"  -I"C:/SDL-1.2.15/include" 
+BIN  = shipwreck.exe
+CXXFLAGS = $(CXXINCS)   -fexpensive-optimizations
+CFLAGS = $(INCS)   -fexpensive-optimizations
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before shipwreck.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "shipwreck.exe" $(LIBS)
+
+Bullet.o: Bullet.cpp
+	$(CPP) -c Bullet.cpp -o Bullet.o $(CXXFLAGS)
+
+DeathState.o: DeathState.cpp
+	$(CPP) -c DeathState.cpp -o DeathState.o $(CXXFLAGS)
+
+Enemy.o: Enemy.cpp
+	$(CPP) -c Enemy.cpp -o Enemy.o $(CXXFLAGS)
+
+Game.o: Game.cpp
+	$(CPP) -c Game.cpp -o Game.o $(CXXFLAGS)
+
+GameObject.o: GameObject.cpp
+	$(CPP) -c GameObject.cpp -o GameObject.o $(CXXFLAGS)
+
+GameState.o: GameState.cpp
+	$(CPP) -c GameState.cpp -o GameState.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Menoticon.o: Menoticon.cpp
+	$(CPP) -c Menoticon.cpp -o Menoticon.o $(CXXFLAGS)
+
+MenoticonBullet.o: MenoticonBullet.cpp
+	$(CPP) -c MenoticonBullet.cpp -o MenoticonBullet.o $(CXXFLAGS)
+
+MenuState.o: MenuState.cpp
+	$(CPP) -c MenuState.cpp -o MenuState.o $(CXXFLAGS)
+
+PauseState.o: PauseState.cpp
+	$(CPP) -c PauseState.cpp -o PauseState.o $(CXXFLAGS)
+
+Player.o: Player.cpp
+	$(CPP) -c Player.cpp -o Player.o $(CXXFLAGS)
+
+PlayState.o: PlayState.cpp
+	$(CPP) -c PlayState.cpp -o PlayState.o $(CXXFLAGS)
+
+Runoticon.o: Runoticon.cpp
+	$(CPP) -c Runoticon.cpp -o Runoticon.o $(CXXFLAGS)
+
+SDL_collide.o: SDL_collide.cpp
+	$(CPP) -c SDL_collide.cpp -o SDL_collide.o $(CXXFLAGS)
+
+Shipwreck.o: Shipwreck.cpp
+	$(CPP) -c Shipwreck.cpp -o Shipwreck.o $(CXXFLAGS)
+
+Sprite.o: Sprite.cpp
+	$(CPP) -c Sprite.cpp -o Sprite.o $(CXXFLAGS)
+
+Vector2.o: Vector2.cpp
+	$(CPP) -c Vector2.cpp -o Vector2.o $(CXXFLAGS)
+
+Spikoticon.o: Spikoticon.cpp
+	$(CPP) -c Spikoticon.cpp -o Spikoticon.o $(CXXFLAGS)
